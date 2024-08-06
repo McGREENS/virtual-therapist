@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Therapist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Description and Login Page -->
+    <div id="login-page" class="page">
+        <div class="description">
+            <h2>Welcome to Virtual Therapist</h2>
+            <p>Our system helps you manage your mental well-being by providing:</p>
+            <ul>
+                <li>24/7 AI-based chat support</li>
+                <li>Personalized advice and recommendations</li>
+                <li>Option to connect with licensed therapists via video call</li>
+            </ul>
+        </div>
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+                <a href="#" id="register-link">Register</a>
+                <a href="#" id="forgot-password-link">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Page -->
+    <div id="registration-page" class="page" style="display:none;">
+        <h2>Register</h2>
+        <form id="registration-form">
+            <label for="reg-email">Email</label>
+            <input type="email" id="reg-email" name="email" required>
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" name="password" required>
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <button type="submit">Register</button>
+            <a href="#" id="login-link">Back to Login</a>
+        </form>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="page" style="display:none;">
+        <nav>
+            <a href="#" id="home-link">Home</a>
+            <a href="#" id="profile-link">Profile</a>
+            <a href="#" id="appointments-link">Appointments</a>
+            <a href="#" id="logout-link">Logout</a>
+        </nav>
+        <div class="content">
+            <section id="recent-chats">
+                <h3>Recent Chats</h3>
+                <ul>
+                    <li>Chat 1</li>
+                    <li>Chat 2</li>
+                </ul>
+            </section>
+            <section id="upcoming-appointments">
+                <h3>Upcoming Appointments</h3>
+                <ul>
+                    <li>Appointment 1</li>
+                    <li>Appointment 2</li>
+                </ul>
+            </section>
+            <button id="new-chat-btn">Start New Chat</button>
+        </div>
+    </div>
+
+    <!-- Chat Interface -->
+    <div id="chat-interface" class="page" style="display:none;">
+        <div class="chat-window">
+            <div class="messages">
+                <p><strong>AI:</strong> How can I help you?</p>
+                <p><strong>User:</strong> I feel stressed.</p>
+                <p><strong>AI:</strong> Let's talk about it.</p>
+            </div>
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+            <button id="end-chat-btn">End Chat</button>
+            <button id="video-call-btn">Video Call</button>
+        </div>
+    </div>
+
+    <!-- Video Call Page -->
+    <div id="video-call-page" class="page" style="display:none;">
+        <div class="video-stream">
+            <!-- Placeholder for video stream -->
+            <div class="video-placeholder">Video Stream</div>
+            <button id="mute-btn">Mute/Unmute</button>
+            <button id="end-call-btn">End Call</button>
+        </div>
+    </div>
+
+    <!-- Profile Management -->
+    <div id="profile-page" class="page" style="display:none;">
+        <h2>Profile Management</h2>
+        <form id="profile-form">
+            <label for="profile-picture">Profile Picture</label>
+            <input type="file" id="profile-picture" name="profile-picture">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email</label>
+            <input type="email" id="profile-email" name="email">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
